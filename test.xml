@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniConfig>
+    <Hive>
+        <local ip="172.18.36.11" port="88"/>
+        <public ip="172.18.36.11" port="88"/>
+    </Hive>
+    <Plus>
+        <local ip="172.18.36.31" port="80"/>
+        <public ip="172.18.36.31" port="80"/>
+    </Plus>
+    <Omniocp>
+        <local ip="${Hive.local.ip}" port="9200"/>
+        <public ip="${Hive.public.ip}" port="${Omniocp.local.port}"/>
+    </Omniocp>
+    <Omnizhihui>
+        <local ip="${Hive.local.ip}" port="9204"/>
+        <public ip="${Hive.public.ip}" port="${Omnizhihui.local.port}"/>
+    </Omnizhihui>
+    <Infosharecloud>
+        <local ip="${Hive.local.ip}" port="9081"/>
+        <public ip="${Hive.public.ip}" port="${Infosharecloud.local.port}"/>
+    </Infosharecloud>
+    <Omniportal>
+        <local ip="${Hive.local.ip}" port="9206"/>
+        <public ip="${Hive.public.ip}" port="${Omniportal.local.port}"/>
+    </Omniportal>
+    <Articleeditor>
+        <local ip="${Hive.local.ip}" port="9208"/>
+        <public ip="${Hive.public.ip}" port="${Articleeditor.local.port}"/>
+    </Articleeditor>
+    <Wxeditor>
+        <local ip="${Hive.local.ip}" port="9210"/>
+        <public ip="${Hive.public.ip}" port="${Wxeditor.local.port}"/>
+    </Wxeditor>
+    <H5>
+        <local ip="${Hive.local.ip}" port="9212"/>
+        <public ip="${Hive.public.ip}" port="${H5.local.port}"/>
+    </H5>
+    <Infoshare>
+        <local ip="${Hive.local.ip}" port="9081"/>
+        <public ip="${Hive.public.ip}" port="${Infoshare.local.port}"/>
+    </Infoshare>
+    <!-- ==============基础应用=============== -->
+    <!-- 数据�? -->
+    <DB>
+        <local ip="${Hive.local.ip}" port="3306"/>
+        <public ip="${Hive.pubic.ip}" port="${DB.local.port}"/>
+        <extend key="username" value="sdba"/>
+        <extend key="password" value="sdba"/>
+    </DB>
+    <!-- 缓存 -->
+    <Cache>
+        <local ip="${Hive.local.ip}" port="6379"/>
+        <public ip="${Hive.pubic.ip}" port="${Cache.local.port}"/>
+    </Cache>
+    <!-- kafka消息队列 -->
+    <Message>
+        <local ip="${Hive.local.ip}" port="2181"/>
+        <public ip="${Hive.pubic.ip}" port="${Message.local.port}"/>
+    </Message>
+    <!-- ftp服务 -->
+    <Ftp>
+        <local ip="${Plus.local.ip}" port="21"/>
+        <public ip="${Plus.public.ip}" port="${Ftp.local.port}"/>
+    </Ftp>
+    <!-- Nginx服务 -->
+    <Nginx>
+        <local ip="${Hive.local.ip}" port="80"/>
+        <public ip="${Hive.public.ip}" port="${Nginx.local.port}"/>
+    </Nginx>
+    <!-- 云盘服务 -->
+    <Ntag>
+        <local ip="${Hive.local.ip}" port="${Nginx.local.port}"/>
+        <public ip="${Hive.public.ip}" port="${Nginx.public.port}"/>
+    </Ntag>
+    <!-- Luna专用流媒体服�? -->
+    <Streaming>
+        <local ip="${Plus.local.ip}" port="83"/>
+        <public ip="${Plus.public.ip}" port="${Streaming.local.port}"/>
+    </Streaming>
+    <!-- ==================业务应用==================== -->
+    <!-- ###########ocp######## -->
+    <tpp>
+        <local ip="${Omniocp.local.ip}" port="${Omniocp.local.port}"/>
+        <public ip="${Omniocp.public.ip}" port="${Omniocp.public.port}"/>
+    </tpp>
+    <adapter>
+        <local ip="${Omniocp.local.ip}" port="${Omniocp.local.port}"/>
+        <public ip="${Omniocp.public.ip}" port="${Omniocp.public.port}"/>
+    </adapter>
+    <adapter-ws>
+        <local ip="${Omniocp.local.ip}" port="${Omniocp.local.port}"/>
+        <public ip="${Omniocp.public.ip}" port="${Omniocp.public.port}"/>
+    </adapter-ws>
+    <!-- ###########Omnizhihui######## -->
+    <pgc-hive>
+        <local ip="${Omnizhihui.local.ip}" port="${Omnizhihui.local.port}"/>
+        <public ip="${Omnizhihui.public.ip}" port="${Omnizhihui.public.port}"/>
+    </pgc-hive>
+    <video-rest>
+        <local ip="${Omnizhihui.local.ip}" port="${Omnizhihui.local.port}"/>
+        <public ip="${Omnizhihui.public.ip}" port="${Omnizhihui.public.port}"/>
+    </video-rest>
+    <!-- ###########Infosharecloud######## -->
+    <news-cloud>
+        <local ip="${Infosharecloud.local.ip}" port="${Infosharecloud.local.port}"/>
+        <public ip="${Infosharecloud.public.ip}" port="${Infosharecloud.public.port}"/>
+    </news-cloud>
+    <news-manage>
+        <local ip="${Infosharecloud.local.ip}" port="${Infosharecloud.local.port}"/>
+        <public ip="${Infosharecloud.public.ip}" port="${Infosharecloud.public.port}"/>
+    </news-manage>
+    <userinterface>
+        <local ip="${Infosharecloud.local.ip}" port="${Infosharecloud.local.port}"/>
+        <public ip="${Infosharecloud.public.ip}" port="${Infosharecloud.public.port}"/>
+    </userinterface>
+    <!-- ###########Omniportal######## -->
+    <portal>
+        <local ip="${Omniportal.local.ip}" port="${Omniportal.local.port}"/>
+        <public ip="${Omniportal.public.ip}" port="${Omniportal.public.port}"/>
+    </portal>
+    <!-- ###########Articleeditor######## -->
+    <sobey-articleeditor>
+        <local ip="${Articleeditor.local.ip}" port="${Articleeditor.local.port}"/>
+        <public ip="${Articleeditor.public.ip}" port="${Articleeditor.public.port}"/>
+    </sobey-articleeditor>
+    <!-- ###########Wxeditor######## -->
+    <template>
+        <local ip="${Wxeditor.local.ip}" port="${Wxeditor.local.port}"/>
+        <public ip="${Wxeditor.public.ip}" port="${Wxeditor.public.port}"/>
+    </template>
+    <wxfb>
+        <local ip="${Wxeditor.local.ip}" port="${Wxeditor.local.port}"/>
+        <public ip="${Wxeditor.public.ip}" port="${Wxeditor.public.port}"/>
+    </wxfb>
+    <wxfg>
+        <local ip="${Wxeditor.local.ip}" port="${Wxeditor.local.port}"/>
+        <public ip="${Wxeditor.public.ip}" port="${Wxeditor.public.port}"/>
+    </wxfg>
+   
+</OmniConfig>
